@@ -1,0 +1,5 @@
+# CLion / CMake build directories
+cmake-build-*/
+CMAKEdebug/
+CMAKEbuild/
+build/
