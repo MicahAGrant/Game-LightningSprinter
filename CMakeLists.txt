@@ -46,12 +46,11 @@ FetchContent_MakeAvailable(SDL SDL_mixer)
 add_subdirectory(utilities)
 add_subdirectory(graphics)
 add_subdirectory(world)
-add_subdirectory(game_objects)
 
 add_library(game_lib
-    game.cpp game.h
+        game.cpp game.h
 )
 
-target_link_libraries(game_lib PUBLIC SDL3::SDL3 graphics utilities world game_objects)
+target_link_libraries(game_lib PUBLIC SDL3::SDL3 graphics utilities world)
 add_executable(game main.cpp)
 target_link_libraries(game PUBLIC game_lib)

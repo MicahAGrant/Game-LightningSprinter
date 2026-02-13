@@ -1,7 +1,8 @@
 #pragma once
 
-#include "player.h"
 #include "world.h"
+#include "camera.h"
+#include "graphics.h"
 
 class Game {
 public:
@@ -11,7 +12,7 @@ public:
     void render();
 
 private:
-    Player *player;
+    GameObject *player;
     World world;
     Graphics graphics;
 
@@ -20,6 +21,7 @@ private:
     Uint64 performance_frequency;
     Uint64 prev_counter;
     float lag;
+    Camera camera;
     // SDL counts ticks, pf shows ticks, ticks used to see how much time as past
     // lag keeps track of that and allows for updating at 64fps
 };
