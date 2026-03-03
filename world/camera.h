@@ -1,12 +1,14 @@
 #pragma once
+
 #include "tilemap.h"
-#include "toggle.h"
 #include "vec.h"
+#include "toggle.h"
 #include "physics.h"
 
 class Graphics;
 class Color;
-class Physics;
+class Sprite;
+class GameObject;
 
 class Camera {
 public:
@@ -19,16 +21,16 @@ public:
 
     void render(const Vec<float>& position, const Color& color, bool filled=true) const;
     void render(const Tilemap& tilemap) const;
-
-    Physics physics;
+    void render(const Vec<float>& position, const Sprite& sprite) const;
+    void render(const GameObject& obj) const;
 
 private:
-    Graphics &graphics;
+    Graphics& graphics;
     float tilesize;
-    Vec<float> location;
     Toggle grid_toggle;
 
     void calculate_visible_tiles();
     Vec<int> visible_min, visible_max;
-    Vec<float> goal, velocity, acceleration;
+    Vec<float> goal;
+    Physics physics;
 };

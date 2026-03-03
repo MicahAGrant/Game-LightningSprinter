@@ -49,8 +49,10 @@ add_subdirectory(world)
 
 add_library(game_lib
         game.cpp game.h
+        asset_manager.cpp asset_manager.h
 )
 
 target_link_libraries(game_lib PUBLIC SDL3::SDL3 graphics utilities world)
-add_executable(game main.cpp)
+add_executable(game main.cpp
+        asset_manager.cpp)
 target_link_libraries(game PUBLIC game_lib)

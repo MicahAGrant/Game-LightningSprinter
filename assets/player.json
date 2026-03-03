@@ -1,0 +1,8 @@
+{
+  "idle" : {
+    "filename" : "player_standing.png",
+    "location" : [0,0],
+    "size" : [64,64],
+    "scale" : 1
+  }
+}
