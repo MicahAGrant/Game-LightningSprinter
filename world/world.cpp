@@ -128,9 +128,6 @@ void World::move_to(Vec<float>& position, const Vec<int>& size, Vec<float>& velo
         velocity.x = 0;
     }
 
-    // float dx_right = std::ceil(position.x) - position.x;
-    // float dx_left = position.x - std::floor(position.x);
-    // float dy_left = std::ceil
     float dy_tr = (position.y + size.y) - (std::floor(position.y + size.y));
     float dx_tr = std::ceil(position.x)-(position.x+size.x);
 
