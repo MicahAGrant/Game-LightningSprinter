@@ -160,7 +160,7 @@ void Running::update(World& world, GameObject& obj, double dt) {
         obj.color = {0, 0, 255, 255};
     }
     else if (on_platform(world, obj)) {
-        obj.color = {128, 0, 128};
+        obj.color = {255, 255, 0};
     }
 }
 
