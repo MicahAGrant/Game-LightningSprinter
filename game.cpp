@@ -4,27 +4,30 @@
 #include "game_object.h"
 
 Game::Game(std::string title, int width, int height)
-    : graphics{title, width, height}, world{31, 11}, camera{graphics, 64}, dt{1.0/60.0}, lag{0.0}, performance_frequency{SDL_GetPerformanceFrequency()}, prev_counter{SDL_GetPerformanceCounter()} {
+    : graphics{title, width, height}, world{31, 31}, camera{graphics, 64}, dt{1.0/60.0}, lag{0.0}, performance_frequency{SDL_GetPerformanceFrequency()}, prev_counter{SDL_GetPerformanceCounter()} {
 
     // load the first "level"
     // boundry walls
     world.add_platform(0, 0, 30, 1);
-    world.add_platform(0, 0, 1, 10);
-    world.add_platform(30, 0, 1, 10);
-    world.add_platform(0, 10, 31, 1);
+    world.add_platform(0, 0, 1, 30);
+    world.add_platform(30, 0, 1, 30);
+    world.add_platform(0, 30, 31, 1);
 
     // platforms
     world.add_platform(3, 7, 4, 1);
     world.add_platform(13, 4, 6, 1);
 
+    // walls
+    world.add_platform(10, 10, 1, 7);
+    world.add_platform(17, 12, 1, 7);
+    world.add_platform(24, 14, 1, 7);
+
     player = world.create_player();
-    player->sprite = AssetManager::get_game_object_sprite("player", graphics);
+    // player->sprite = AssetManager::get_game_object_sprite("player", graphics);
     camera.set_location(player->physics.position);
 }
 
 void Game::handle_event(SDL_Event* event) {
-    // player input is null rn !FIX!
-
     player->input->collect_discrete_event(event);
 }
 
