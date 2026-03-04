@@ -22,6 +22,7 @@ public:
 class Running:public State {
 public:
     void on_enter(World&, GameObject&) override;
+    void update(World&, GameObject&, double dt) override;
     Action* input(World&, GameObject&, ActionType) override;
 };
 

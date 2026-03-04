@@ -151,6 +151,20 @@ Action* Running::input(World& world, GameObject& obj, ActionType action_type) {
     return nullptr;
 }
 
+void Running::update(World& world, GameObject& obj, double dt) {
+    if (on_right_wall(world, obj) || on_left_wall(world, obj)) {
+        obj.physics.velocity.y *= 0.8;
+        obj.color = {255, 165, 0};
+    }
+    else if (!on_platform(world, obj)) {
+        obj.color = {0, 0, 255, 255};
+    }
+    else if (on_platform(world, obj)) {
+        obj.color = {128, 0, 128};
+    }
+}
+
+
 void Sprint::on_enter(World&, GameObject& obj) {
     elapsed = cooldown;
     obj.color = {128, 0, 128};
