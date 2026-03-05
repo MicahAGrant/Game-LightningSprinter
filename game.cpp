@@ -23,7 +23,7 @@ Game::Game(std::string title, int width, int height)
     world.add_platform(24, 14, 1, 7);
 
     player = world.create_player();
-    // player->sprite = AssetManager::get_game_object_sprite("player", graphics);
+    player->sprite = AssetManager::get_game_object_sprite("player", graphics);
     camera.set_location(player->physics.position);
 }
 

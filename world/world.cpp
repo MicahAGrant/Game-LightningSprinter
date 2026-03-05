@@ -42,6 +42,7 @@ GameObject* World::create_player() {
         {{StateType::Running, Transition::BoostLeft}, StateType::Sprint},
         {{StateType::Standing, Transition::BoostRight}, StateType::Sprint},
         {{StateType::Running, Transition::BoostRight}, StateType::Sprint},
+        {{StateType::InAir, Transition::Move}, StateType::Running},
         {{StateType::Sprint, Transition::Stop}, StateType::Standing},
         {{StateType::Sprint, Transition::Move}, StateType::Running},
         {{StateType::Sprint, Transition::Jump}, StateType::InAir},
