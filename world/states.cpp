@@ -132,6 +132,14 @@ Action* Running::input(World& world, GameObject& obj, ActionType action_type) {
         obj.fsm->transition(Transition::Jump, world, obj);
         return new Jump();
     }
+    else if (action_type == ActionType::MoveRight) {
+        obj.fsm->transition(Transition::Move, world, obj);
+        return new MoveRight;
+    }
+    else if (action_type == ActionType::MoveLeft) {
+        obj.fsm->transition(Transition::Move, world, obj);
+        return new MoveLeft;
+    }
     else if (action_type == ActionType::BoostRight) {
         obj.fsm->transition(Transition::BoostRight, world, obj);
         return new BoostRight();
