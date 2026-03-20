@@ -1,4 +1,4 @@
-#include "Graphics.h"
+#include "graphics.h"
 
 Graphics::Graphics(const std::string& title, int window_width, int window_height)
     : title{title}, width{window_width}, height{window_height} {

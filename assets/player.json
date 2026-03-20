@@ -1,8 +1,59 @@
 {
-  "idle" : {
+"sprites" : [
+  {
+    "name" : "idle",
     "filename" : "player_standing.png",
     "location" : [0,0],
     "size" : [64,64],
-    "scale" : 1
+    "scale" : 1,
+    "number_of_frames" : 3,
+    "dt_per_frame" : 0.25
+  },
+  {
+    "name": "running",
+    "filename": "player_walking.png",
+    "location": [0, 0],
+    "size": [64, 64],
+    "scale": 1,
+    "number_of_frames": 5,
+    "dt_per_frame": 0.15
+  },
+  {
+    "name": "sprinting",
+    "filename": "player_sprinting.png",
+    "location": [0, 0],
+    "size": [64, 64],
+    "scale": 1,
+    "number_of_frames": 6,
+    "dt_per_frame": 0.1
+  },
+  {
+    "name" : "jumping",
+    "filename" : "player_jumping.png",
+    "location" : [0,0],
+    "size" : [64,64],
+    "scale" : 1,
+    "number_of_frames" : 4,
+    "dt_per_frame" : 0.25
+  },
+  {
+    "name" : "sliding",
+    "filename" : "player_sliding.png",
+    "location" : [0,0],
+    "size" : [64,64],
+    "scale" : 1,
+    "number_of_frames" : 2,
+    "dt_per_frame" : 0.5
+  }
+],
+  "physics" : {
+    "position": [10, 5],
+    "velocity": [0, 0],
+    "acceleration": [0, -30],
+    "gravity": -30.0,
+    "damping": 0.9,
+    "walk_acceleration": 30.0,
+    "jump_velocity": 20.0,
+    "terminal_velocity": 20.0
   }
 }

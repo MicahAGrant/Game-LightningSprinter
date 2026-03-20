@@ -31,6 +31,7 @@ bool on_right_wall(World& world, GameObject& obj) {
 // Standing
 void Standing::on_enter(World&, GameObject& obj) {
     obj.color = {255, 0, 0, 255};
+    obj.set_sprite("idle");
     obj.physics.acceleration.x = 0;
 }
 
@@ -68,6 +69,7 @@ void Standing::update(World& world, GameObject& obj, double dt) {
 // In Air
 void InAir::on_enter(World& world, GameObject& obj) {
     elapsed = cooldown;
+    obj.set_sprite("jumping");
     obj.color = {0, 0, 255, 255};
 }
 
@@ -122,6 +124,7 @@ void InAir::on_exit(World&, GameObject& obj) {
 // Running
 void Running::on_enter(World&, GameObject& obj) {
     obj.color = {255, 255, 0, 255};
+    obj.set_sprite("running");
 }
 
 Action* Running::input(World& world, GameObject& obj, ActionType action_type) {
@@ -134,11 +137,11 @@ Action* Running::input(World& world, GameObject& obj, ActionType action_type) {
     }
     else if (action_type == ActionType::MoveRight) {
         obj.fsm->transition(Transition::Move, world, obj);
-        return new MoveRight;
+        return new MoveRight();
     }
     else if (action_type == ActionType::MoveLeft) {
         obj.fsm->transition(Transition::Move, world, obj);
-        return new MoveLeft;
+        return new MoveLeft();
     }
     else if (action_type == ActionType::BoostRight) {
         obj.fsm->transition(Transition::BoostRight, world, obj);
@@ -161,32 +164,40 @@ Action* Running::input(World& world, GameObject& obj, ActionType action_type) {
 
 void Running::update(World& world, GameObject& obj, double dt) {
     if (on_right_wall(world, obj) || on_left_wall(world, obj)) {
+        obj.set_sprite("sliding");
         obj.physics.velocity.y *= 0.8;
         obj.color = {255, 165, 0};
     }
     else if (!on_platform(world, obj)) {
+        obj.set_sprite("jumping");
         obj.color = {0, 0, 255, 255};
     }
     else if (on_platform(world, obj)) {
+        obj.set_sprite("running");
         obj.color = {255, 255, 0};
     }
 }
 
 
+
 void Sprint::on_enter(World&, GameObject& obj) {
     elapsed = cooldown;
+    obj.set_sprite("sprinting");
     obj.color = {128, 0, 128};
 }
 
 void Sprint::update(World& world, GameObject& obj, double dt) {
     if (on_right_wall(world, obj) || on_left_wall(world, obj)) {
+        obj.set_sprite("sliding");
         obj.physics.velocity.y *= 0.8;
         obj.color = {255, 165, 0};
     }
     else if (!on_platform(world, obj)) {
+        obj.set_sprite("jumping");
         obj.color = {0, 0, 255, 255};
     }
     else if (on_platform(world, obj)) {
+        obj.set_sprite("sprinting");
         obj.color = {128, 0, 128};
     }
 }
@@ -229,6 +240,7 @@ Action* Sprint::input(World& world, GameObject& obj, ActionType action_type) {
 
 void OnLeftWall::on_enter(World&, GameObject& obj) {
     obj.color = {255, 165, 0};
+    obj.set_sprite("sliding");
 }
 
 Action* OnLeftWall::input(World& world, GameObject& obj, ActionType action_type) {
@@ -254,6 +266,7 @@ void OnLeftWall::update(World& world, GameObject& obj, double dt) {
 
 void OnRightWall::on_enter(World&, GameObject& obj) {
     obj.color = {255, 165, 0};
+    obj.set_sprite("sliding");
 }
 
 Action* OnRightWall::input(World& world, GameObject& obj, ActionType action_type) {
