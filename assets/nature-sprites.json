@@ -1,0 +1,94 @@
+{
+  "tiles": [
+    {
+      "name": "grass1",
+      "filename": "grass1.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    },
+    {
+      "name": "grass2",
+      "filename": "grass2.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    },
+    {
+      "name": "dirt1",
+      "filename": "dirt1.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    },
+    {
+      "name": "dirt2",
+      "filename": "dirt2.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    },
+    {
+      "name": "mushroom1",
+      "filename": "mushroom1.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    },
+    {
+      "name": "mushroom2",
+      "filename": "mushroom2.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    },
+    {
+      "name": "mushroom3",
+      "filename": "mushroom3.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    },
+    {
+      "name": "mushroom4",
+      "filename": "mushroom4.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    },
+    {
+      "name": "tree1",
+      "filename": "tree1.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    },
+    {
+      "name": "tree2",
+      "filename": "tree2.png",
+      "location": [0, 0],
+      "size": [64, 64],
+      "scale": 1,
+      "number_of_frames": 1,
+      "dt_per_frame": -1
+    }
+  ]
+}
