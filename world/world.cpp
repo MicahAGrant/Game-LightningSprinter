@@ -70,8 +70,7 @@ GameObject* World::create_player(const Level& level) {
     // player input
     Input* input = new KeyboardInput();
 
-    player = new GameObject(Vec<float>{static_cast<float>(level.player_spawn_location.x),
-        static_cast<float>(level.player_spawn_location.y)}, *this, fsm, input, Color{255, 0, 0, 255});
+    player = new GameObject(Vec<int>{1,1}, *this, fsm, input, Color{255, 0, 0, 255});
     return player;
 }
 
@@ -105,7 +104,7 @@ void World::update(float dt) {
     player->physics.velocity = future_velocity;
 }
 
-void World::move_to(Vec<float>& position, const Vec<float>& size, Vec<float>& velocity) {
+void World::move_to(Vec<float>& position, const Vec<int>& size, Vec<float>& velocity) {
     bool bottom_right = collides({position.x + size.x, position.y});
     bool bottom_left = collides(position);
     bool top_right = collides({position.x + size.x, position.y + size.y});

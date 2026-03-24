@@ -4,7 +4,7 @@
 #include "fsm.h"
 #include "action.h"
 
-GameObject::GameObject(const Vec<float>& size, World& world, FSM* fsm, Input* input, Color color)
+GameObject::GameObject(const Vec<int>& size, World& world, FSM* fsm, Input* input, Color color)
     : size{size}, fsm{fsm}, input{input}, color{color} {
 }
 
