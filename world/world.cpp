@@ -8,9 +8,12 @@
 #include "states.h"
 #include "input.h"
 #include "keyboard_input.h"
+#include "level.h"
+#include "audio.h"
+#include "events.h"
 
-World::World(const Level& level)
-    : tilemap(level.width, level.height) {
+World::World(const Level& level, Audio& audio, GameObject* player, Events events)
+    : tilemap(level.width, level.height), audio{&audio}, player{player}, events{events} {
     load_level(level);
 }
 
@@ -33,6 +36,7 @@ void World::load_level(const Level& level) {
     for (const auto& [pos, tile_id] : level.tile_locations) {
         tilemap(pos.x, pos.y) = level.tile_types.at(tile_id);
     }
+    audio->load_sounds({});
 }
 
 

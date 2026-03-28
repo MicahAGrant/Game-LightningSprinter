@@ -3,10 +3,13 @@
 #include "world.h"
 #include "camera.h"
 #include "graphics.h"
+#include "audio.h"
+#include "events.h"
 
 class Game {
 public:
     Game(std::string title, int width, int height);
+    ~Game();
     void handle_event(SDL_Event* event);
     void input();
     void update();
@@ -23,6 +26,11 @@ private:
     Uint64 prev_counter;
     float lag;
     Camera camera;
+    Audio audio;
     // SDL counts ticks, pf shows ticks, ticks used to see how much time as past
     // lag keeps track of that and allows for updating at 64fps
+
+    // events
+    Events events;
+    void get_events();
 };

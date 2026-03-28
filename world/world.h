@@ -8,10 +8,16 @@
 #include "physics.h"
 #include "game_object.h"
 #include "level.h"
+#include "events.h"
+
+class GameObject;
+class Level;
+class Audio;
 
 class World {
 public:
-    World(const Level& level);
+    World(const Level& level, Audio& audio, GameObject* player, Events events);
+
     void add_platform(float x, float y, float width, float height);
     bool collides(const Vec<float>& position) const;
     GameObject* create_player(const Level& level);
@@ -21,8 +27,10 @@ public:
 
     Tilemap tilemap;
     Physics physics;
+    bool end_level{false};
 
 private:
-    // std::vector<SDL_FRect> platforms;
     GameObject* player;
+    Audio* audio;
+    Events events;
 };

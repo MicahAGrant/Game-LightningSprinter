@@ -1,94 +1,134 @@
 {
   "tiles": [
     {
-      "name": "grass1",
-      "filename": "grass1.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "grass1",
+        "filename": "grass1.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     },
     {
-      "name": "grass2",
-      "filename": "grass2.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "grass2",
+        "filename": "grass2.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     },
     {
-      "name": "dirt1",
-      "filename": "dirt1.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "dirt1",
+        "filename": "dirt1.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     },
     {
-      "name": "dirt2",
-      "filename": "dirt2.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "dirt2",
+        "filename": "dirt2.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     },
     {
-      "name": "mushroom1",
-      "filename": "mushroom1.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "mushroom1",
+        "filename": "mushroom1.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     },
     {
-      "name": "mushroom2",
-      "filename": "mushroom2.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "mushroom2",
+        "filename": "mushroom2.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     },
     {
-      "name": "mushroom3",
-      "filename": "mushroom3.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "mushroom3",
+        "filename": "mushroom3.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     },
     {
-      "name": "mushroom4",
-      "filename": "mushroom4.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "mushroom4",
+        "filename": "mushroom4.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     },
     {
-      "name": "tree1",
-      "filename": "tree1.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "tree1",
+        "filename": "tree1.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     },
     {
-      "name": "tree2",
-      "filename": "tree2.png",
-      "location": [0, 0],
-      "size": [64, 64],
-      "scale": 1,
-      "number_of_frames": 1,
-      "dt_per_frame": -1
+      "sprite": {
+        "name": "tree2",
+        "filename": "tree2.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": ""
     }
   ]
 }

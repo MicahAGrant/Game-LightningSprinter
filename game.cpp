@@ -3,23 +3,35 @@
 #include "asset_manager.h"
 #include "game_object.h"
 #include "fsm.h"
+#include "keyboard_input.h"
+#include "states.h"
+
+using Events = std::map<std::string, Event*>;
 
 Game::Game(std::string title, int width, int height)
     : graphics{title, width, height}, camera{graphics, 64}, dt{1.0 / 60.0},
       performance_frequency{SDL_GetPerformanceFrequency()}, prev_counter{SDL_GetPerformanceCounter()}, lag{0.0} {
+    // load events
+    get_events();
+
     // load the first level
     Level level{"level_1"};
     AssetManager::get_level_details(graphics, level);
+
     // create the world for the first level
-    world = new World(level);
+    world = new World(level, audio, player.get(), events);
+
     // Give player its assets then put it in the correct state
     player = std::unique_ptr<GameObject>(world->create_player(level));
     AssetManager::get_game_object_details("player", graphics, *player);
+
     // use the spawn location's position
     player->physics.position = {static_cast<float>(level.player_spawn_location.x),
     static_cast<float>(level.player_spawn_location.y)};
     player->fsm->current_state->on_enter(*world, *player);
+
     camera.set_location(player->physics.position);
+    audio.play_sounds("background", true);
 }
 
 void Game::handle_event(SDL_Event* event) {
@@ -59,4 +71,15 @@ void Game::render() {
 
     // update
     graphics.update();
+}
+
+Game::~Game() {
+    delete world;
+    for (auto [_, event] : events) {
+        delete event;
+    }
+}
+
+void Game::get_events() {
+    events["next_level"] = new NextLevel();
 }
