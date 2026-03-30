@@ -1,0 +1,335 @@
+{
+    "height": 20,
+    "player_spawn_location": [
+        3,
+        4
+    ],
+    "tile_filenames": [
+        "nature-sprites.json"
+    ],
+    "tiles": [
+        {
+            "pos": [
+                0,
+                2
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                0,
+                3
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                4
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                5
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                6
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                7
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                8
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                9
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                10
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                11
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                12
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                13
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                14
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                15
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                16
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                17
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                19
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                1,
+                2
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                1,
+                12
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                1,
+                17
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                2
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                2,
+                12
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                18
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                3,
+                2
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                3,
+                13
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                19
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                4,
+                2
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                4,
+                14
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                4,
+                19
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                5,
+                2
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                5,
+                14
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                6,
+                2
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                6,
+                15
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                7,
+                2
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                7,
+                15
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                7,
+                16
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                8,
+                2
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                8,
+                15
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                8,
+                17
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                9,
+                2
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                9,
+                15
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                10,
+                2
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                11,
+                2
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                12,
+                2
+            ],
+            "tile": "nature-sprites.json:tree2"
+        }
+    ],
+    "width": 100
+}

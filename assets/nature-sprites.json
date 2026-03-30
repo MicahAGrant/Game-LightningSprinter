@@ -129,6 +129,19 @@
       },
       "blocking": true,
       "event_name": ""
+    },
+    {
+      "sprite": {
+        "name": "treedoor",
+        "filename": "treedoor.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": "next_level"
     }
   ]
 }

@@ -18,12 +18,12 @@ Game::Game(std::string title, int width, int height)
     Level level{"level_1"};
     AssetManager::get_level_details(graphics, level);
 
+    // Give player its assets then put it in the correct state
+    create_player();
+    AssetManager::get_game_object_details("player", graphics, *player);
+
     // create the world for the first level
     world = new World(level, audio, player.get(), events);
-
-    // Give player its assets then put it in the correct state
-    player = std::unique_ptr<GameObject>(world->create_player(level));
-    AssetManager::get_game_object_details("player", graphics, *player);
 
     // use the spawn location's position
     player->physics.position = {static_cast<float>(level.player_spawn_location.x),
@@ -57,6 +57,9 @@ void Game::update() {
         camera.update(player->physics.position + displacement, dt);
         lag -= dt;
     }
+    if (world->end_level) {
+        load_level();
+    }
 }
 
 void Game::render() {
@@ -82,4 +85,54 @@ Game::~Game() {
 
 void Game::get_events() {
     events["next_level"] = new NextLevel();
+}
+
+void Game::load_level() {
+    std::string level_name = "level_" + std::to_string(++current_level);
+    Level level{level_name};
+    AssetManager::get_level_details(graphics, level);
+
+    // create the world
+    delete world;
+    world = new World(level, audio, player.get(), events);
+
+    player->physics.position = {static_cast<float>(level.player_spawn_location.x), static_cast<float>(level.player_spawn_location.y)};
+    camera.set_location(player->physics.position);
+    audio.play_sounds("background", true);
+}
+
+void Game::create_player() {
+    Transitions transitions = {
+        {{StateType::Standing, Transition::Jump}, StateType::InAir},
+        {{StateType::InAir, Transition::Stop}, StateType::Standing},
+        {{StateType::Standing, Transition::Move}, StateType::Running},
+        {{StateType::Running, Transition::Stop}, StateType::Standing},
+        {{StateType::Running, Transition::Jump}, StateType::InAir},
+        {{StateType::Standing, Transition::BoostLeft}, StateType::Sprint},
+        {{StateType::Running, Transition::BoostLeft}, StateType::Sprint},
+        {{StateType::Standing, Transition::BoostRight}, StateType::Sprint},
+        {{StateType::Running, Transition::BoostRight}, StateType::Sprint},
+        {{StateType::InAir, Transition::Move}, StateType::Running},
+        {{StateType::Sprint, Transition::Stop}, StateType::Standing},
+        {{StateType::Sprint, Transition::Move}, StateType::Running},
+        {{StateType::Sprint, Transition::Jump}, StateType::InAir},
+        {{StateType::InAir, Transition::BoostLeft}, StateType::Sprint},
+        {{StateType::InAir, Transition::BoostRight}, StateType::Sprint},
+        {{StateType::OnLeftWall, Transition::WallJumpLeft}, StateType::InAir},
+        {{StateType::OnRightWall, Transition::WallJumpRight}, StateType::InAir}
+    };
+    States states = {
+        {StateType::Standing, new Standing()},
+        {StateType::InAir, new InAir()},
+        {StateType::Running, new Running()},
+        {StateType::Sprint, new Sprint()},
+        {StateType::OnLeftWall, new OnLeftWall()},
+        {StateType::OnRightWall, new OnRightWall()}
+    };
+    FSM* fsm = new FSM{transitions, states, StateType::Standing};
+
+    // player input
+    Input* input = new KeyboardInput();
+
+    player = std::make_unique<GameObject>(Vec<int>{1,1}, fsm, input, Color{255, 0, 0, 255});
 }

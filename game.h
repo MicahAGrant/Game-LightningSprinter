@@ -33,4 +33,10 @@ private:
     // events
     Events events;
     void get_events();
+
+    // level help
+    int current_level{1};
+    void load_level();
+
+    void create_player();
 };

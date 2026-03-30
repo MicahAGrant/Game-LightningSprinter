@@ -7,4 +7,3 @@
 void NextLevel::perform(World& world, GameObject& obj) {
     world.end_level = true;
 }
-

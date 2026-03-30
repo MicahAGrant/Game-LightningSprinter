@@ -12,7 +12,7 @@ add_library(world
         input.cpp input.h
         level.cpp level.h
         audio.cpp audio.h
-        events.cpp events.h
+        events.h events.cpp
 )
 
 target_include_directories(world PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

@@ -20,7 +20,6 @@ public:
 
     void add_platform(float x, float y, float width, float height);
     bool collides(const Vec<float>& position) const;
-    GameObject* create_player(const Level& level);
     void update(float dt);
     void move_to(Vec<float>& position, const Vec<int>& size, Vec<float>& velocity);
     void load_level(const Level& level);
@@ -33,4 +32,6 @@ private:
     GameObject* player;
     Audio* audio;
     Events events;
+
+    void touch_tiles(GameObject& obj);
 };
