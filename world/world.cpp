@@ -36,6 +36,12 @@ void World::load_level(const Level& level) {
         tilemap(pos.x, pos.y) = level.tile_types.at(tile_id);
     }
     audio->load_sounds({});
+
+    for (const auto& [pos, enemy_name] : level.enemy_locations) {
+        GameObject enemy{enemy_name, nullptr, nullptr, {255, 255, 0, 255}};
+        enemy.physics.position = pos;
+        game_objects.push_back(enemy);
+    }
 }
 
 void World::update(float dt) {

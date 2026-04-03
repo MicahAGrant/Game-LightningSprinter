@@ -17,7 +17,7 @@ public:
 
 private:
     std::unique_ptr<GameObject> player;
-    World* world;
+    World* world = nullptr;
     Graphics graphics;
 
     // timing
@@ -35,7 +35,7 @@ private:
     void get_events();
 
     // level help
-    int current_level{1};
+    int current_level{0};
     void load_level();
 
     void create_player();

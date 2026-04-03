@@ -1,4 +1,13 @@
 {
+    "enemies": [
+        {
+            "enemy": "tree-monster",
+            "pos": [
+                8.0,
+                3.0
+            ]
+        }
+    ],
     "height": 20,
     "player_spawn_location": [
         3,

@@ -14,24 +14,11 @@ Game::Game(std::string title, int width, int height)
     // load events
     get_events();
 
-    // load the first level
-    Level level{"level_1"};
-    AssetManager::get_level_details(graphics, level);
-
     // Give player its assets then put it in the correct state
     create_player();
     AssetManager::get_game_object_details("player", graphics, *player);
 
-    // create the world for the first level
-    world = new World(level, audio, player.get(), events);
-
-    // use the spawn location's position
-    player->physics.position = {static_cast<float>(level.player_spawn_location.x),
-    static_cast<float>(level.player_spawn_location.y)};
-    player->fsm->current_state->on_enter(*world, *player);
-
-    camera.set_location(player->physics.position);
-    audio.play_sounds("background", true);
+    load_level();
 }
 
 void Game::handle_event(SDL_Event* event) {
@@ -72,6 +59,11 @@ void Game::render() {
     // draw the player
     camera.render(*player);
 
+    // draw enemies
+    for (auto& obj : world->game_objects) {
+        camera.render(obj);
+    }
+
     // update
     graphics.update();
 }
@@ -96,7 +88,13 @@ void Game::load_level() {
     delete world;
     world = new World(level, audio, player.get(), events);
 
+    // assets for objs
+    for (auto& obj : world->game_objects) {
+        AssetManager::get_game_object_details(obj.obj_name + "-enemy", graphics, obj);
+    }
+
     player->physics.position = {static_cast<float>(level.player_spawn_location.x), static_cast<float>(level.player_spawn_location.y)};
+    player->fsm->current_state->on_enter(*world, *player);
     camera.set_location(player->physics.position);
     audio.play_sounds("background", true);
 }
@@ -134,5 +132,5 @@ void Game::create_player() {
     // player input
     Input* input = new KeyboardInput();
 
-    player = std::make_unique<GameObject>(Vec<int>{1,1}, fsm, input, Color{255, 0, 0, 255});
+    player = std::make_unique<GameObject>("player", fsm, input, Color{255, 0, 0, 255});
 }

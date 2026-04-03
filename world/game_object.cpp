@@ -4,8 +4,8 @@
 #include "fsm.h"
 #include "action.h"
 
-GameObject::GameObject(const Vec<int>& size, FSM* fsm, Input* input, Color color)
-    : size{size}, fsm{fsm}, input{input}, color{color} {
+GameObject::GameObject(std::string name, FSM* fsm, Input* input, Color color)
+    : obj_name{name}, fsm{fsm}, input{input}, color{color} {
 }
 
 GameObject::~GameObject() {

@@ -28,10 +28,11 @@ public:
     Physics physics;
     bool end_level{false};
 
-private:
     GameObject* player;
     Audio* audio;
     Events events;
+
+    std::vector<GameObject> game_objects;
 
     void touch_tiles(GameObject& obj);
 };
