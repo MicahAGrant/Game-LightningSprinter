@@ -94,6 +94,9 @@ void LevelDesigner::input() {
     if (keys[SDL_SCANCODE_1]) {
         place_enemy("tree-monster");
     }
+    if (keys[SDL_SCANCODE_2]) {
+        place_enemy("void-monster");
+    }
 
     // timer for scrolling
     if (lag < dt) {

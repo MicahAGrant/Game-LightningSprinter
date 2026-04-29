@@ -190,7 +190,7 @@ void Game::update_enemy(GameObject& obj) {
     Transitions transitions;
     States states;
 
-    if (obj.obj_name == "tree-monster") {
+    if (obj.obj_name == "tree-monster" || obj.obj_name == "void-monster") {
         transitions = {
             {{StateType::Standing, Transition::Move}, StateType::Patrolling},
             {{StateType::Patrolling, Transition::Stop}, StateType::Standing}

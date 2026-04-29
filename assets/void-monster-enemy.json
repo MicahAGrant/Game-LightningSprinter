@@ -1,0 +1,36 @@
+{
+  "sprites" : [
+    {
+      "name" : "idle",
+      "filename" : "void_enemy.png",
+      "location" : [0, 0],
+      "size" : [64, 64],
+      "scale" : 1,
+      "number_of_frames" : 4,
+      "dt_per_frame" : 0.5
+    },
+    {
+      "name" : "patrolling",
+      "filename" : "void_enemy.png",
+      "location" : [0, 0],
+      "size" : [64, 64],
+      "scale" : 1,
+      "number_of_frames" : 4,
+      "dt_per_frame" : 0.5
+    }
+  ],
+  "physics" : {
+    "velocity": [0, 0],
+    "acceleration" : [0, 0],
+    "gravity": 0,
+    "damping": 0.9,
+    "walk_acceleration": 0.0,
+    "jump_velocity": 5.0,
+    "terminal_velocity": 10.0
+  },
+  "size" : [1,1],
+  "health" : 3,
+  "max_health" : 3,
+  "damage" : 3
+
+}
