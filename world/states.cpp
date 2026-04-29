@@ -4,6 +4,7 @@
 
 #include "action.h"
 #include "game_object.h"
+#include "random.h"
 #include "world.h"
 
 // Helper
@@ -56,6 +57,10 @@ Action* Standing::input(World& world, GameObject& obj, ActionType action_type) {
         obj.fsm->transition(Transition::BoostRight, world, obj);
         return new BoostRight;
     }
+    else if (action_type == ActionType::AttackAll) {
+        obj.fsm->transition(Transition::AttackAll, world, obj);
+    }
+
     return nullptr;
 }
 
@@ -289,4 +294,43 @@ void OnRightWall::update(World& world, GameObject& obj, double dt) {
         obj.physics.gravity *= 0.1;
     }
     std::cout << "This works";
+}
+
+// AttackAll
+void AttackAll::on_enter(World& world, GameObject& obj) {
+    obj.color = {255, 100, 0, 255};
+    for (auto& enemy : world.game_objects) {
+        if (enemy == world.player) continue;
+        enemy->take_damage(obj.damage);
+    }
+    elapsed = 0;
+}
+
+
+void AttackAll::update(World& world, GameObject& obj, double dt) {
+    elapsed += dt;
+    if (elapsed >= cooldown) {
+        obj.fsm->transition(Transition::Stop, world, obj);
+    }
+}
+
+// Patrolling
+void Patrolling::on_enter(World& world, GameObject& obj) {
+    // set cooldown to a random amount of time 3-10 seconds
+    elapsed = 0;
+    cooldown = randint(3,10);
+    Running::on_enter(world, obj);
+}
+
+
+Action* Patrolling::input(World& world, GameObject& obj, ActionType action_type) {
+    if (elapsed >= cooldown) {
+        return Running::input(world, obj, ActionType::None);
+    }
+    return Running::input(world, obj, action_type);
+}
+
+
+void Patrolling::update(World&, GameObject&, double dt) {
+    elapsed += dt;
 }

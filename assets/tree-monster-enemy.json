@@ -2,12 +2,21 @@
     "sprites" : [
         {
             "name" : "idle",
-            "filename" : "tree-monster-idle.png",
+            "filename" : "tree_monster_idle.png",
             "location" : [0, 0],
             "size" : [64, 64],
             "scale" : 1,
-            "number_of_frames" : 1,
+            "number_of_frames" : 2,
             "dt_per_frame" : 1
+        },
+        {
+            "name" : "running",
+            "filename" : "tree_monster_walk.png",
+            "location" : [0, 0],
+            "size" : [64, 64],
+            "scale" : 1,
+            "number_of_frames" : 4,
+            "dt_per_frame" : 0.25
         }
     ],
     "physics" : {
@@ -19,5 +28,9 @@
         "jump_velocity": 20.0,
         "terminal_velocity": 30.0
     },
-    "size" : [1,1]
+    "size" : [1,1],
+    "health" : 6,
+    "max_health" : 6,
+    "damage" : 1
+
 }

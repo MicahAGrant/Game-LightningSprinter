@@ -1,4 +1,21 @@
 {
+    "backgrounds": [
+        {
+            "distance": 4.0,
+            "filename": "BG1.png",
+            "scale": 5.0
+        },
+        {
+            "distance": 2.0,
+            "filename": "BG2.png",
+            "scale": 5.0
+        },
+        {
+            "distance": 1.0,
+            "filename": "BG3.png",
+            "scale": 5.0
+        }
+    ],
     "enemies": [
         {
             "enemy": "tree-monster",
@@ -12,6 +29,23 @@
     "player_spawn_location": [
         3,
         4
+    ],
+    "sounds": [
+        {
+            "filename": "forest_theme1.wav",
+            "loop_forever": true,
+            "name": "background"
+        },
+        {
+            "filename": "jump.mp3",
+            "loop_forever": false,
+            "name": "jump"
+        },
+        {
+            "filename": "fire.mp3",
+            "loop_forever": false,
+            "name": "fireball"
+        }
     ],
     "tile_filenames": [
         "nature-sprites.json"
@@ -576,6 +610,13 @@
                 2
             ],
             "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                15,
+                3
+            ],
+            "tile": "nature-sprites.json:wave"
         },
         {
             "pos": [

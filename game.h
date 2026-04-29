@@ -6,6 +6,8 @@
 #include "audio.h"
 #include "events.h"
 
+enum class GameMode{Playing, GameOver};
+
 class Game {
 public:
     Game(std::string title, int width, int height);
@@ -39,4 +41,8 @@ private:
     void load_level();
 
     void create_player();
+    void update_enemy(GameObject& obj);
+
+    //
+    GameMode mode{GameMode::Playing};
 };

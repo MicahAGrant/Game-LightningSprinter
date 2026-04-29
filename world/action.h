@@ -8,7 +8,8 @@ enum class ActionType {
     BoostLeft,
     BoostRight,
     WallJumpLeft,
-    WallJumpRight
+    WallJumpRight,
+    AttackAll
 };
 
 class World;
@@ -46,4 +47,14 @@ class WallJumpLeft : public Action {
 
 class WallJumpRight : public Action {
     void perform(World&, GameObject& obj) override;
+};
+
+class AttackAllEnemies : public Action {
+public:
+    void perform(World& world, GameObject& obj) override;
+};
+
+class ShootFireball : public Action {
+public:
+    void perform(World& world, GameObject& obj) override;
 };

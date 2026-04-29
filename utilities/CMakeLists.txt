@@ -3,7 +3,8 @@ project(utilities)
 add_library(utilities
     vec.cpp vec.h
     physics.cpp physics.h
-        toggle.cpp toggle.h
+    toggle.cpp toggle.h
+    random.cpp random.h
 )
 
 target_link_libraries(utilities PUBLIC SDL3::SDL3)

@@ -1,11 +1,13 @@
 #pragma once
 
+#include "audio.h"
 #include "graphics.h"
 #include "vec.h"
 #include "sprite.h"
 #include "json.hpp"
 #include "physics.h"
 #include "level.h"
+#include "world.h"
 
 class GameObject;
 
@@ -21,13 +23,21 @@ void from_json(const nlohmann::json& j, Vec<T>& v) {
     v.y = j.at(1).get<T>();
 }
 
+// add this to have access to Sound
+//note, you may have to move these above your to/from json functions
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Sound, name, filename, loop_forever);
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Background, filename, scale, distance);
+
+// add sounds to the to/from json functions for level:
 // json for Level
 inline void to_json(nlohmann::json& j, const Level& level) {
     j["width"] = level.width;
     j["height"] = level.height;
     j["tile_filenames"] = level.tile_filenames;
     j["player_spawn_location"] = level.player_spawn_location;
+    j["sounds"] = level.sounds;
     j["tiles"] = nlohmann::json::array();
+    j["backgrounds"] = level.backgrounds;
     for (const auto& [pos, tile] : level.tile_locations) {
         j["tiles"].push_back({
             {"pos", pos},
@@ -40,13 +50,15 @@ inline void to_json(nlohmann::json& j, const Level& level) {
             {"enemy", enemy}
         });
     }
-
 }
 inline void from_json(const nlohmann::json& j, Level& level) {
     level.width = j.at("width").get<int>();
     level.height = j.at("height").get<int>();
     level.tile_filenames = j.at("tile_filenames").get<std::vector<std::string>>();
-    level.player_spawn_location = j.contains("player_spawn_location") ? j.at("player_spawn_location").get<Vec<int>>() : Vec<int>{-1, -1};
+    level.sounds = j.at("sounds").get<std::vector<Sound>>();
+    level.backgrounds = j.at("backgrounds").get<std::vector<Background>>();
+    level.player_spawn_location = j.contains("player_spawn_location") ?
+    j.at("player_spawn_location").get<Vec<int>>() : Vec<int>{-1, -1};
     if (j.contains("tiles")) {
         for (const auto& t : j.at("tiles")) {
             Vec<int> pos = t.at("pos").get<Vec<int>>();
@@ -69,7 +81,8 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Physics, velocity, acceleration, gravity, dam
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Tile, sprite, event_name, blocking);
 
 namespace AssetManager {
-    void get_game_object_details(const std::string& name, Graphics& graphics, GameObject& obj);
+    void get_game_object_details(const std::string& name, Graphics& graphics, GameObject& obj, bool random_start = false);
     void get_level_details(Graphics& graphics, Level& level);
     void update_level_details(const Level& level);
+    void get_available_items(const std::string filename, Graphics& graphics, World& world);
 }

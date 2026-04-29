@@ -13,6 +13,9 @@ add_library(world
         level.cpp level.h
         audio.cpp audio.h
         events.h events.cpp
+        quadtree.cpp quadtree.h
+        projectile.h projectile.cpp
+        ai_input.cpp ai_input.h
 )
 
 target_include_directories(world PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

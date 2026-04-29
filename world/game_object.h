@@ -8,10 +8,12 @@
 #include "input.h"
 #include "physics.h"
 #include "animated_sprite.h"
+#include "quadtree.h"
 
 class World;
 class FSM;
 class Input;
+class AABB;
 
 using Sprites = std::map<std::string, AnimatedSprite>;
 
@@ -20,10 +22,14 @@ public:
     GameObject(std::string name, FSM* fsm, Input* input, Color color);
     ~GameObject();
 
-    void update(World& world, double dt);
+    virtual void update(World& world, double dt);
 
     std::pair<Vec<float>, Color> get_sprite() const;
     void set_sprite(const std::string& next_sprite);
+
+    AABB get_bounding_box();
+
+    void take_damage(int attack_damage);
 
     // Player data
     std::string obj_name;
@@ -35,4 +41,13 @@ public:
     Sprites sprites;
     Sprite sprite;
     std::string sprite_name;
+
+    // combat
+    int health;
+    int max_health;
+    int damage;
+    bool is_alive = true;
+
+    double iframe_time_remaining{0.0};
+    bool flash_sprite() const;
 };

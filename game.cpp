@@ -1,10 +1,13 @@
 #include "game.h"
 
+#include "ai_input.h"
 #include "asset_manager.h"
 #include "game_object.h"
 #include "fsm.h"
 #include "keyboard_input.h"
 #include "states.h"
+
+using Events = std::map<std::string, Event*>;
 
 using Events = std::map<std::string, Event*>;
 
@@ -18,16 +21,29 @@ Game::Game(std::string title, int width, int height)
     create_player();
     AssetManager::get_game_object_details("player", graphics, *player);
 
+    // load first level
     load_level();
 }
 
 void Game::handle_event(SDL_Event* event) {
-    player->input->collect_discrete_event(event);
+    switch (mode) {
+        case GameMode::Playing:
+            auto action = player->input->collect_discrete_event(event);
+        if (action) {
+            action->perform(*world, *player);
+            delete action;
+        }
+        break;
+    }
 }
 
 void Game::input() {
-    player->input->get_input();
-    camera.handle_input();
+    switch (mode) {
+        case GameMode::Playing:
+        player->input->get_input();
+        camera.handle_input();
+        break;
+    }
 }
 
 void Game::update() {
@@ -35,23 +51,40 @@ void Game::update() {
     lag += (now - prev_counter) / (float)performance_frequency;
     prev_counter = now;
     while (lag >= dt) {
-        player->input->handle_input(*world, *player);
-        player->update(*world, dt);
-        world->update(dt);
-        // put the camera slightly ahead of the player
-        float L = length(player->physics.velocity);
-        Vec displacement = 8.0f * player->physics.velocity / (1.0f + L);
-        camera.update(player->physics.position + displacement, dt);
+        switch (mode) {
+            case GameMode::Playing:
+                for (auto obj : world->game_objects) {
+                    obj->input->handle_input(*world, *obj);
+                }
+
+                world->update(dt);
+                // put the camera slightly ahead of the player
+                float L = length(player->physics.velocity);
+                Vec displacement = 8.0f * player->physics.velocity / (1.0f + L);
+                camera.update(player->physics.position + displacement, dt);
+
+                // check for level end
+                if (world->end_level) {
+                    load_level();
+                }
+                // check for level end
+                if (world->end_game) {
+                    mode = GameMode::GameOver;
+                }
+                // do one where game ends and if player alive, then win!
+                break;
+        }
         lag -= dt;
     }
-    if (world->end_level) {
-        load_level();
-    }
+
 }
 
 void Game::render() {
     // clear
     graphics.clear();
+
+    // draw the backgrounds
+    camera.render(world->backgrounds);
 
     // draw the world
     camera.render(world->tilemap);
@@ -61,7 +94,16 @@ void Game::render() {
 
     // draw enemies
     for (auto& obj : world->game_objects) {
-        camera.render(obj);
+        camera.render(*obj);
+    }
+
+    // draw projectiles
+    for (auto& projectile : world->projectiles) {
+        camera.render(*projectile);
+    }
+
+    if (mode == GameMode::GameOver) {
+        camera.render_game_over();
     }
 
     // update
@@ -70,10 +112,11 @@ void Game::render() {
 
 Game::~Game() {
     delete world;
-    for (auto [_, event] : events) {
+    for (auto [_, event]: events) {
         delete event;
     }
 }
+
 
 void Game::get_events() {
     events["next_level"] = new NextLevel();
@@ -88,9 +131,14 @@ void Game::load_level() {
     delete world;
     world = new World(level, audio, player.get(), events);
 
+    // get available items
+    AssetManager::get_available_items("items", graphics, *world);
+
     // assets for objs
-    for (auto& obj : world->game_objects) {
-        AssetManager::get_game_object_details(obj.obj_name + "-enemy", graphics, obj);
+    for (auto obj : world->game_objects) {
+        if (obj == world->player) continue;
+        update_enemy(*obj);
+        AssetManager::get_game_object_details(obj->obj_name + "-enemy", graphics, *obj, true);
     }
 
     player->physics.position = {static_cast<float>(level.player_spawn_location.x), static_cast<float>(level.player_spawn_location.y)};
@@ -117,7 +165,9 @@ void Game::create_player() {
         {{StateType::InAir, Transition::BoostLeft}, StateType::Sprint},
         {{StateType::InAir, Transition::BoostRight}, StateType::Sprint},
         {{StateType::OnLeftWall, Transition::WallJumpLeft}, StateType::InAir},
-        {{StateType::OnRightWall, Transition::WallJumpRight}, StateType::InAir}
+        {{StateType::OnRightWall, Transition::WallJumpRight}, StateType::InAir},
+        {{StateType::Standing, Transition::AttackAll}, StateType::AttackAll},
+        {{StateType::AttackAll, Transition::Stop}, StateType::Standing}
     };
     States states = {
         {StateType::Standing, new Standing()},
@@ -125,7 +175,8 @@ void Game::create_player() {
         {StateType::Running, new Running()},
         {StateType::Sprint, new Sprint()},
         {StateType::OnLeftWall, new OnLeftWall()},
-        {StateType::OnRightWall, new OnRightWall()}
+        {StateType::OnRightWall, new OnRightWall()},
+        {StateType::AttackAll, new AttackAll()}
     };
     FSM* fsm = new FSM{transitions, states, StateType::Standing};
 
@@ -133,4 +184,31 @@ void Game::create_player() {
     Input* input = new KeyboardInput();
 
     player = std::make_unique<GameObject>("player", fsm, input, Color{255, 0, 0, 255});
+}
+
+void Game::update_enemy(GameObject& obj) {
+    Transitions transitions;
+    States states;
+
+    if (obj.obj_name == "tree-monster") {
+        transitions = {
+            {{StateType::Standing, Transition::Move}, StateType::Patrolling},
+            {{StateType::Patrolling, Transition::Stop}, StateType::Standing}
+        };
+        states = {
+            {StateType::Standing, new Standing()},
+            {StateType::Patrolling, new Patrolling()}
+        };
+    }
+
+    else {
+        // throw an error?
+    }
+
+    FSM* fsm = new FSM{transitions, states, StateType::Patrolling};
+    obj.fsm = fsm;
+
+    Input* input = new AiInput{};
+    input->next_action_type = ActionType::MoveRight;
+    obj.input = input;
 }

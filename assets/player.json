@@ -52,8 +52,12 @@
     "gravity": -30.0,
     "damping": 0.9,
     "walk_acceleration": 30.0,
-    "jump_velocity": 20.0,
+    "jump_velocity": 17.5,
     "terminal_velocity": 20.0
   },
-  "size" : [1,1]
+  "size" : [1,1],
+  "health" : 10,
+  "max_health" : 10,
+  "damage" : 2
+
 }
