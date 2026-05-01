@@ -19,6 +19,10 @@ void AiInput::handle_input(World& world, GameObject& obj) {
         next_action_type = ActionType::MoveLeft;
     }
 
+    if (obj.obj_name == "void-monster") {
+        next_action_type = ActionType::Attack;
+    }
+
     Action* action = obj.fsm->current_state->input(world, obj, next_action_type);
 
     if (action) {

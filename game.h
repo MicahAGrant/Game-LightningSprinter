@@ -41,7 +41,7 @@ private:
     void load_level();
 
     void create_player();
-    void update_enemy(GameObject& obj);
+    void update_enemy(GameObject& obj, float dt);
 
     //
     GameMode mode{GameMode::Playing};

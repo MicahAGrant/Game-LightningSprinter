@@ -1,5 +1,7 @@
 #include "game.h"
 
+#include <iostream>
+
 #include "ai_input.h"
 #include "asset_manager.h"
 #include "game_object.h"
@@ -137,7 +139,7 @@ void Game::load_level() {
     // assets for objs
     for (auto obj : world->game_objects) {
         if (obj == world->player) continue;
-        update_enemy(*obj);
+        update_enemy(*obj, dt);
         AssetManager::get_game_object_details(obj->obj_name + "-enemy", graphics, *obj, true);
     }
 
@@ -167,7 +169,9 @@ void Game::create_player() {
         {{StateType::OnLeftWall, Transition::WallJumpLeft}, StateType::InAir},
         {{StateType::OnRightWall, Transition::WallJumpRight}, StateType::InAir},
         {{StateType::Standing, Transition::AttackAll}, StateType::AttackAll},
-        {{StateType::AttackAll, Transition::Stop}, StateType::Standing}
+        {{StateType::AttackAll, Transition::Stop}, StateType::Standing},
+        {{StateType::Standing, Transition::Melee}, StateType::Melee},
+        {{StateType::Melee, Transition::Stop}, StateType::Standing}
     };
     States states = {
         {StateType::Standing, new Standing()},
@@ -176,7 +180,8 @@ void Game::create_player() {
         {StateType::Sprint, new Sprint()},
         {StateType::OnLeftWall, new OnLeftWall()},
         {StateType::OnRightWall, new OnRightWall()},
-        {StateType::AttackAll, new AttackAll()}
+        {StateType::AttackAll, new AttackAll()},
+        {StateType::Melee, new Melee()}
     };
     FSM* fsm = new FSM{transitions, states, StateType::Standing};
 
@@ -186,18 +191,20 @@ void Game::create_player() {
     player = std::make_unique<GameObject>("player", fsm, input, Color{255, 0, 0, 255});
 }
 
-void Game::update_enemy(GameObject& obj) {
+void Game::update_enemy(GameObject& obj, float dt) {
     Transitions transitions;
     States states;
 
     if (obj.obj_name == "tree-monster" || obj.obj_name == "void-monster") {
         transitions = {
             {{StateType::Standing, Transition::Move}, StateType::Patrolling},
-            {{StateType::Patrolling, Transition::Stop}, StateType::Standing}
+            {{StateType::Patrolling, Transition::Stop}, StateType::Standing},
+            {{StateType::Standing, Transition::Move}, StateType::Attack}
         };
         states = {
             {StateType::Standing, new Standing()},
-            {StateType::Patrolling, new Patrolling()}
+            {StateType::Patrolling, new Patrolling()},
+            {StateType::Attack, new Attack()}
         };
     }
 

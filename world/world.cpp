@@ -85,9 +85,15 @@ void World::update(double dt) {
     for (auto& projectile : projectiles) {
         std::vector<GameObject*> p_collides_with = quadtree.query_range(projectile->get_bounding_box());
         for (auto& obj : p_collides_with) {
-            if (obj == player) continue;
-            obj->take_damage(projectile->damage);
-            projectile->elapsed += projectile->lifetime;
+            if (obj != player && (projectile->obj_name == "fireball" || projectile->obj_name == "melee_attack")) {
+                obj->take_damage(projectile->damage);
+                projectile->elapsed += projectile->lifetime;
+            }
+            if (obj == player && projectile->obj_name == "void_attack") {
+                player->take_damage(projectile->damage);
+                projectile->elapsed += projectile->lifetime;
+            }
+
         }
     }
 

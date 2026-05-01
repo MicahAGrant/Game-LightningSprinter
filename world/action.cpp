@@ -39,3 +39,17 @@ void ShootFireball::perform(World &world, GameObject &obj) {
     // make the fireball shooting sound
     world.audio->play_sounds("fireball");
 }
+
+void AttackProjectile::perform(World& world, GameObject& obj) {
+    auto void_attack = dynamic_cast<Projectile*>(world.available_items["void_attack"]());
+    void_attack->physics.position = {obj.physics.position.x, obj.physics.position.y};
+    world.projectiles.push_back(void_attack);
+    // sound effect here
+}
+
+void AttackMelee::perform(World& world, GameObject& obj) {
+    auto melee_attack = dynamic_cast<Projectile*>(world.available_items["melee_attack"]());
+    melee_attack->physics.position = obj.physics.position;
+    world.projectiles.push_back(melee_attack);
+    // sound effect here
+}

@@ -60,14 +60,24 @@ Action* Standing::input(World& world, GameObject& obj, ActionType action_type) {
     else if (action_type == ActionType::AttackAll) {
         obj.fsm->transition(Transition::AttackAll, world, obj);
     }
+    else if (action_type == ActionType::Attack && obj.obj_name == "void-monster" && elapsed <= 3) {
+        obj.fsm->transition(Transition::Stop, world, obj);
+        return new AttackProjectile;
+    }
+    else if (action_type == ActionType::Melee) {
+        obj.fsm->transition(Transition::Melee, world, obj);
+        return new AttackMelee;
+    }
 
     return nullptr;
 }
 
 void Standing::update(World& world, GameObject& obj, double dt) {
+    elapsed = randint(1,100);
     if (!on_platform(world, obj)) {
         obj.fsm->transition(Transition::Jump, world, obj);
     }
+
 }
 
 
@@ -293,7 +303,6 @@ void OnRightWall::update(World& world, GameObject& obj, double dt) {
     if (on_right_wall(world, obj)) {
         obj.physics.gravity *= 0.1;
     }
-    std::cout << "This works";
 }
 
 // AttackAll
@@ -333,4 +342,45 @@ Action* Patrolling::input(World& world, GameObject& obj, ActionType action_type)
 
 void Patrolling::update(World&, GameObject&, double dt) {
     elapsed += dt;
+}
+
+// Attack
+void Attack::on_enter(World& world, GameObject& obj) {
+    obj.color = {255, 100, 0, 255};
+    for (auto& enemy : world.game_objects) {
+        if (enemy == world.player) {
+            enemy->take_damage(obj.damage);
+        }
+    }
+    elapsed = 0;
+}
+
+
+void Attack::update(World& world, GameObject& obj, double dt) {
+    elapsed += dt;
+    if (elapsed >= cooldown) {
+        obj.fsm->transition(Transition::Stop, world, obj);
+    }
+}
+
+// Melee attacks
+void Melee::on_enter(World& world, GameObject& obj) {
+    obj.set_sprite("melee");
+    elapsed = 0;
+}
+
+Action* Melee::input(World& world, GameObject& obj, ActionType action_type) {
+    if (action_type == ActionType::Melee && elapsed >= cooldown) {
+        obj.fsm->transition(Transition::Melee, world, obj);
+        return new AttackMelee;
+    }
+    return nullptr;
+}
+
+void Melee::update(World& world, GameObject& obj, double dt) {
+    elapsed += dt;
+
+    if (elapsed >= cooldown) {
+        obj.fsm->transition(Transition::Stop, world, obj);
+    }
 }

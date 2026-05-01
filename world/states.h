@@ -6,6 +6,9 @@ public:
     void on_enter(World&, GameObject&) override;
     void update(World&, GameObject&, double dt) override;
     Action* input(World&, GameObject&, ActionType) override;
+
+    double cooldown = 5;
+    double elapsed = 0;
 };
 
 class InAir:public State {
@@ -75,4 +78,25 @@ public:
 
     double elapsed = 0;
     double cooldown = 2;
+};
+
+class Attack : public State {
+public:
+    virtual void on_enter(World&, GameObject&) override;
+    virtual void update(World&, GameObject&, double dt) override;
+
+
+    double elapsed = 0;
+    const double cooldown = 2;
+};
+
+class Melee : public State {
+public:
+    void on_enter(World&, GameObject&) override;
+    Action* input(World&, GameObject&, ActionType) override;
+    void update(World&, GameObject&, double dt) override;
+
+
+    double elapsed = 0;
+    const double cooldown = 0.25;
 };

@@ -47,6 +47,9 @@ Action* KeyboardInput::collect_discrete_event(SDL_Event* event) {
         if (event->key.scancode == SDL_SCANCODE_F) {
             return new ShootFireball();
         }
+        if (event->key.scancode == SDL_SCANCODE_L) {
+            next_action_type = ActionType::Melee;
+        }
     }
     return nullptr;
 }

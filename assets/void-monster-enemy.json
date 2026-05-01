@@ -17,6 +17,15 @@
       "scale" : 1,
       "number_of_frames" : 4,
       "dt_per_frame" : 0.5
+    },
+    {
+      "name" : "attacking",
+      "filename" : "void_enemy.png",
+      "location" : [0, 0],
+      "size" : [64, 64],
+      "scale" : 1,
+      "number_of_frames" : 4,
+      "dt_per_frame" : 0.5
     }
   ],
   "physics" : {
@@ -29,8 +38,8 @@
     "terminal_velocity": 10.0
   },
   "size" : [1,1],
-  "health" : 3,
-  "max_health" : 3,
+  "health" : 6,
+  "max_health" : 6,
   "damage" : 3
 
 }

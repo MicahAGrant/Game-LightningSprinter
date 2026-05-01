@@ -44,6 +44,15 @@
     "scale" : 1,
     "number_of_frames" : 2,
     "dt_per_frame" : 0.5
+  },
+  {
+    "name" : "melee",
+    "filename" : "player_melee.png",
+    "location" : [0,0],
+    "size" : [64,64],
+    "scale" : 1,
+    "number_of_frames" : 5,
+    "dt_per_frame" : 0.05
   }
 ],
   "physics" : {
