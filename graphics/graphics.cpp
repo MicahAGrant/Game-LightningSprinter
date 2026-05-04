@@ -12,7 +12,7 @@ Graphics::Graphics(std::string title, int width, int height)
     if (!SDL_CreateWindowAndRenderer(title.data(), width, height, SDL_WINDOW_RESIZABLE, &window, &renderer)) {
         SDL_Log("Couldn't create window/renderer: %s", SDL_GetError());
     }
-    SDL_SetRenderScale(renderer, 1.5f, 1.5f);
+    // SDL_SetRenderScale(renderer, 1.5f, 1.5f);
     SDL_SetRenderLogicalPresentation(renderer, width, height, SDL_LOGICAL_PRESENTATION_LETTERBOX);
     SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 }

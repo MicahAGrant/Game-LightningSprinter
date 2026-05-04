@@ -22,7 +22,7 @@ Vec<float> Camera::world_to_screen(const Vec<float>& world_position) const {
     Vec<float> pixel = (world_position - physics.position) * static_cast<float>(tilesize);
 
     // shift to center
-    pixel += Vec<float>{graphics.width / 4.0f, graphics.height / 1.5f};
+    pixel += Vec<float>{graphics.width / 2.0f, graphics.height / 2.0f};
 
     // flip y
     pixel.y = graphics.height - pixel.y;

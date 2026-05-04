@@ -1,36 +1,19 @@
 {
-    "sounds" : [
+    "backgrounds": [
         {
-            "name": "background",
-            "filename" : "forest_theme1.wav",
-            "loop_forever": true
-        },
-        {
-            "name": "jump",
-            "filename" : "jump.mp3",
-            "loop_forever": false
-        },
-        {
-            "name": "fireball",
-            "filename" : "fire.mp3",
-            "loop_forever": false
-        }
-    ],
-    "backgrounds" : [
-        {
+            "distance": 4.0,
             "filename": "BG1.png",
-            "scale" : 5,
-            "distance": 4
+            "scale": 5.0
         },
         {
-            "filename" : "BG2.png",
-            "scale" : 5,
-            "distance" : 2
+            "distance": 2.0,
+            "filename": "BG2.png",
+            "scale": 5.0
         },
         {
-            "filename" : "BG3.png",
-            "scale" : 5,
-            "distance" : 1
+            "distance": 1.0,
+            "filename": "BG3.png",
+            "scale": 5.0
         }
     ],
     "enemies": [
@@ -40,12 +23,57 @@
                 18.0,
                 3.0
             ]
+        },
+        {
+            "enemy": "tree-monster",
+            "pos": [
+                51.0,
+                3.0
+            ]
+        },
+        {
+            "enemy": "tree-monster",
+            "pos": [
+                56.0,
+                3.0
+            ]
+        },
+        {
+            "enemy": "void-monster",
+            "pos": [
+                69.0,
+                16.0
+            ]
+        },
+        {
+            "enemy": "tree-monster",
+            "pos": [
+                78.0,
+                3.0
+            ]
         }
     ],
     "height": 20,
     "player_spawn_location": [
         3,
         4
+    ],
+    "sounds": [
+        {
+            "filename": "forest_theme1.wav",
+            "loop_forever": true,
+            "name": "background"
+        },
+        {
+            "filename": "jump.mp3",
+            "loop_forever": false,
+            "name": "jump"
+        },
+        {
+            "filename": "fire.mp3",
+            "loop_forever": false,
+            "name": "fireball"
+        }
     ],
     "tile_filenames": [
         "nature-sprites.json"
@@ -281,13 +309,6 @@
                 2
             ],
             "tile": "nature-sprites.json:grass1"
-        },
-        {
-            "pos": [
-                3,
-                5
-            ],
-            "tile": "nature-sprites.json:dirt1"
         },
         {
             "pos": [

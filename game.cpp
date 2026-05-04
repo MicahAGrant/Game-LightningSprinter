@@ -74,6 +74,9 @@ void Game::update() {
                     mode = GameMode::GameOver;
                 }
                 // do one where game ends and if player alive, then win!
+                if (world->end_game && player->is_alive) {
+                    // mode = GameMode::Win;
+                }
                 break;
         }
         lag -= dt;
@@ -170,8 +173,14 @@ void Game::create_player() {
         {{StateType::OnRightWall, Transition::WallJumpRight}, StateType::InAir},
         {{StateType::Standing, Transition::AttackAll}, StateType::AttackAll},
         {{StateType::AttackAll, Transition::Stop}, StateType::Standing},
-        {{StateType::Standing, Transition::Melee}, StateType::Melee},
-        {{StateType::Melee, Transition::Stop}, StateType::Standing}
+        {{StateType::Standing, Transition::MeleeLeft}, StateType::Melee},
+        {{StateType::Melee, Transition::Stop}, StateType::Standing},
+        {{StateType::Running, Transition::MeleeLeft}, StateType::Melee},
+        {{StateType::Melee, Transition::Move}, StateType::Running},
+        {{StateType::Standing, Transition::MeleeRight}, StateType::Melee},
+        {{StateType::Melee, Transition::Stop}, StateType::Standing},
+        {{StateType::Running, Transition::MeleeRight}, StateType::Melee},
+        {{StateType::Melee, Transition::Move}, StateType::Running}
     };
     States states = {
         {StateType::Standing, new Standing()},

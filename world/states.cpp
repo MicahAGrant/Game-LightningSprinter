@@ -24,7 +24,7 @@ bool on_left_wall(World& world, GameObject& obj) {
 
 bool on_right_wall(World& world, GameObject& obj) {
     constexpr float epsilon = 1e-4;
-    Vec<float> upper_right_side{obj.physics.position.x + obj.size.x + epsilon, obj.physics.position.y + epsilon};
+    Vec<float> upper_right_side{obj.physics.position.x + obj.size.x + epsilon, obj.physics.position.y + obj.size.y + epsilon};
     Vec<float> lower_right_side{obj.physics.position.x + obj.size.x + epsilon, obj.physics.position.y + epsilon};
     return world.collides(upper_right_side) || world.collides(lower_right_side);
 }
@@ -64,9 +64,13 @@ Action* Standing::input(World& world, GameObject& obj, ActionType action_type) {
         obj.fsm->transition(Transition::Stop, world, obj);
         return new AttackProjectile;
     }
-    else if (action_type == ActionType::Melee) {
-        obj.fsm->transition(Transition::Melee, world, obj);
-        return new AttackMelee;
+    else if (action_type == ActionType::MeleeLeft) {
+        obj.fsm->transition(Transition::MeleeLeft, world, obj);
+        return new AttackMeleeLeft;
+    }
+    else if (action_type == ActionType::MeleeRight) {
+        obj.fsm->transition(Transition::MeleeRight, world, obj);
+        return new AttackMeleeRight;
     }
 
     return nullptr;
@@ -173,6 +177,14 @@ Action* Running::input(World& world, GameObject& obj, ActionType action_type) {
     else if (action_type == ActionType::Jump && on_right_wall(world, obj)) {
         obj.fsm->transition(Transition::WallJumpRight, world, obj);
         return new WallJumpRight;
+    }
+    if (action_type == ActionType::MeleeRight) {
+        obj.fsm->transition(Transition::MeleeRight, world, obj);
+        return new AttackMeleeLeft;
+    }
+    else if (action_type == ActionType::MeleeRight) {
+        obj.fsm->transition(Transition::MeleeLeft, world, obj);
+        return new AttackMeleeRight;
     }
     return nullptr;
 }
@@ -370,9 +382,13 @@ void Melee::on_enter(World& world, GameObject& obj) {
 }
 
 Action* Melee::input(World& world, GameObject& obj, ActionType action_type) {
-    if (action_type == ActionType::Melee && elapsed >= cooldown) {
-        obj.fsm->transition(Transition::Melee, world, obj);
-        return new AttackMelee;
+    if (action_type == ActionType::MeleeLeft && elapsed >= cooldown) {
+        obj.fsm->transition(Transition::MeleeLeft, world, obj);
+        return new AttackMeleeLeft;
+    }
+    if (action_type == ActionType::MeleeRight && elapsed >= cooldown) {
+        obj.fsm->transition(Transition::MeleeRight, world, obj);
+        return new AttackMeleeRight;
     }
     return nullptr;
 }

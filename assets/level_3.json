@@ -1,0 +1,3801 @@
+{
+    "backgrounds": [
+        {
+            "distance": 4.0,
+            "filename": "BG4.png",
+            "scale": 6.0
+        },
+        {
+            "distance": 2.0,
+            "filename": "BG5.png",
+            "scale": 6.0
+        },
+        {
+            "distance": 1.0,
+            "filename": "BG6.png",
+            "scale": 6.0
+        }
+    ],
+    "enemies": [
+        {
+            "enemy": "tree-monster",
+            "pos": [
+                5.0,
+                35.0
+            ]
+        },
+        {
+            "enemy": "tree-monster",
+            "pos": [
+                13.0,
+                32.0
+            ]
+        },
+        {
+            "enemy": "void-monster",
+            "pos": [
+                18.0,
+                2.0
+            ]
+        },
+        {
+            "enemy": "tree-monster",
+            "pos": [
+                18.0,
+                22.0
+            ]
+        },
+        {
+            "enemy": "tree-monster",
+            "pos": [
+                24.0,
+                80.0
+            ]
+        },
+        {
+            "enemy": "tree-monster",
+            "pos": [
+                25.0,
+                51.0
+            ]
+        }
+    ],
+    "height": 100,
+    "player_spawn_location": [
+        2,
+        3
+    ],
+    "sounds": [
+        {
+            "filename": "forest_theme1.wav",
+            "loop_forever": true,
+            "name": "background"
+        },
+        {
+            "filename": "jump.mp3",
+            "loop_forever": false,
+            "name": "jump"
+        },
+        {
+            "filename": "fire.mp3",
+            "loop_forever": false,
+            "name": "fireball"
+        }
+    ],
+    "tile_filenames": [
+        "nature-sprites.json"
+    ],
+    "tiles": [
+        {
+            "pos": [
+                0,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                0,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                0,
+                2
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                3
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                4
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                5
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                6
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                7
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                8
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                9
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                10
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                11
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                12
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                13
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                14
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                15
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                16
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                17
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                19
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                20
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                21
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                22
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                23
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                24
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                25
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                26
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                27
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                28
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                29
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                30
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                31
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                32
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                33
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                34
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                35
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                36
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                37
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                38
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                39
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                40
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                41
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                42
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                43
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                44
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                45
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                46
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                47
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                48
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                49
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                50
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                51
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                52
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                53
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                54
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                55
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                56
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                57
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                58
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                59
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                60
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                61
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                62
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                63
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                64
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                65
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                66
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                67
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                68
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                69
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                70
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                71
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                72
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                73
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                74
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                75
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                76
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                77
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                78
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                79
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                80
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                81
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                82
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                83
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                84
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                85
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                86
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                87
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                88
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                89
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                90
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                91
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                92
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                93
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                94
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                95
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                96
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                97
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                0,
+                98
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                0,
+                99
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                1,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                1,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                1,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                1,
+                26
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                1,
+                42
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                1,
+                58
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                1,
+                82
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                1,
+                85
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                2,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                2,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                27
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                28
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                29
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                43
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                59
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                83
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                86
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                2,
+                89
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                3,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                3,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                3,
+                19
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                3,
+                30
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                31
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                34
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                3,
+                44
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                47
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                3,
+                59
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                83
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                87
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                88
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                3,
+                89
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                4,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                4,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                4,
+                20
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                4,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                4,
+                22
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                4,
+                32
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                4,
+                34
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                4,
+                45
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                4,
+                47
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                4,
+                60
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                4,
+                83
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                4,
+                89
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                5,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                5,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                5,
+                2
+            ],
+            "tile": "nature-sprites.json:mushroom5"
+        },
+        {
+            "pos": [
+                5,
+                3
+            ],
+            "tile": "nature-sprites.json:mushroom5"
+        },
+        {
+            "pos": [
+                5,
+                4
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                5,
+                20
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                5,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                5,
+                22
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                5,
+                33
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                5,
+                34
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                5,
+                45
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                5,
+                47
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                5,
+                48
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                5,
+                60
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                5,
+                83
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                5,
+                89
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                6,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                6,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                6,
+                5
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                6,
+                6
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                6,
+                7
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                6,
+                20
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                6,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                6,
+                22
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                6,
+                33
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                6,
+                34
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                6,
+                46
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                6,
+                47
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                6,
+                48
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                6,
+                60
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                6,
+                84
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                7,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                7,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                7,
+                8
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                7,
+                9
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                7,
+                20
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                7,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                7,
+                32
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                7,
+                33
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                7,
+                34
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                7,
+                47
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                7,
+                48
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                7,
+                61
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                7,
+                63
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                7,
+                84
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                7,
+                86
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                8,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                8,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                8,
+                10
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                8,
+                11
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                8,
+                12
+            ],
+            "tile": "nature-sprites.json:mushroom5"
+        },
+        {
+            "pos": [
+                8,
+                13
+            ],
+            "tile": "nature-sprites.json:mushroom5"
+        },
+        {
+            "pos": [
+                8,
+                14
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                8,
+                17
+            ],
+            "tile": "nature-sprites.json:mushroom2"
+        },
+        {
+            "pos": [
+                8,
+                20
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                8,
+                32
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                8,
+                33
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                8,
+                47
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                8,
+                61
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                8,
+                62
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                8,
+                63
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                8,
+                84
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                8,
+                85
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                8,
+                86
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                9,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                9,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                9,
+                15
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                9,
+                16
+            ],
+            "tile": "nature-sprites.json:mushroom4"
+        },
+        {
+            "pos": [
+                9,
+                17
+            ],
+            "tile": "nature-sprites.json:mushroom1"
+        },
+        {
+            "pos": [
+                9,
+                20
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                9,
+                32
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                9,
+                33
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                9,
+                47
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                9,
+                61
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                9,
+                62
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                9,
+                63
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                9,
+                84
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                9,
+                85
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                9,
+                86
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                10,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                10,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                10,
+                16
+            ],
+            "tile": "nature-sprites.json:mushroom3"
+        },
+        {
+            "pos": [
+                10,
+                17
+            ],
+            "tile": "nature-sprites.json:mushroom3"
+        },
+        {
+            "pos": [
+                10,
+                32
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                10,
+                61
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                10,
+                62
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                10,
+                63
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                10,
+                83
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                10,
+                84
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                10,
+                85
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                11,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                11,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                11,
+                15
+            ],
+            "tile": "nature-sprites.json:mushroom1"
+        },
+        {
+            "pos": [
+                11,
+                16
+            ],
+            "tile": "nature-sprites.json:mushroom1"
+        },
+        {
+            "pos": [
+                11,
+                28
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                11,
+                60
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                11,
+                61
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                11,
+                62
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                11,
+                83
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                11,
+                84
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                12,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                12,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                12,
+                15
+            ],
+            "tile": "nature-sprites.json:mushroom3"
+        },
+        {
+            "pos": [
+                12,
+                16
+            ],
+            "tile": "nature-sprites.json:mushroom3"
+        },
+        {
+            "pos": [
+                12,
+                28
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                12,
+                29
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                12,
+                59
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                12,
+                60
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                12,
+                61
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                12,
+                62
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                12,
+                83
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                13,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                13,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                13,
+                15
+            ],
+            "tile": "nature-sprites.json:mushroom2"
+        },
+        {
+            "pos": [
+                13,
+                28
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                13,
+                29
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                13,
+                31
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                13,
+                59
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                13,
+                60
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                14,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                14,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                14,
+                29
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                14,
+                30
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                14,
+                31
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                14,
+                59
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                14,
+                60
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                15,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                15,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                15,
+                29
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                15,
+                30
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                15,
+                31
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                15,
+                32
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                15,
+                59
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                16,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                16,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                16,
+                29
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                16,
+                31
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                16,
+                32
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                16,
+                33
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                16,
+                35
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                17,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                17,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                17,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                17,
+                30
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                17,
+                32
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                17,
+                33
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                17,
+                35
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                17,
+                36
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                17,
+                74
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                18,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                18,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                18,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                18,
+                31
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                18,
+                33
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                18,
+                35
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                18,
+                36
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                18,
+                37
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                18,
+                44
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                18,
+                74
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                18,
+                75
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                19,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                19,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                19,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                19,
+                31
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                19,
+                36
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                19,
+                37
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                19,
+                38
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                19,
+                44
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                19,
+                45
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                19,
+                74
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                19,
+                75
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                20,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                20,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                20,
+                20
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                20,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                20,
+                30
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                20,
+                35
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                20,
+                36
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                20,
+                37
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                20,
+                38
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                20,
+                44
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                20,
+                45
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                20,
+                75
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                20,
+                76
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                21,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                21,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                21,
+                19
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                21,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                21,
+                30
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                21,
+                31
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                21,
+                32
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                21,
+                33
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                21,
+                34
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                21,
+                36
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                21,
+                37
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                21,
+                38
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                21,
+                44
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                21,
+                45
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                21,
+                46
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                21,
+                75
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                21,
+                76
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                21,
+                78
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                22,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                22,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                22,
+                19
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                22,
+                21
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                22,
+                29
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                22,
+                36
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                22,
+                37
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                22,
+                38
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                22,
+                45
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                22,
+                46
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                22,
+                75
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                22,
+                76
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                22,
+                78
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                23,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                23,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                23,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                23,
+                27
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                23,
+                28
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                23,
+                36
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                23,
+                37
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                23,
+                45
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                23,
+                46
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                23,
+                74
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                23,
+                78
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                23,
+                79
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                24,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                24,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                24,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                24,
+                27
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                24,
+                36
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                24,
+                45
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                24,
+                50
+            ],
+            "tile": "nature-sprites.json:leaves4"
+        },
+        {
+            "pos": [
+                24,
+                73
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                24,
+                77
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                24,
+                78
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                24,
+                79
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                25,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                25,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                25,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                25,
+                26
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                25,
+                44
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                25,
+                47
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                25,
+                48
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                25,
+                49
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                25,
+                50
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                25,
+                73
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                25,
+                74
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                25,
+                75
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                25,
+                76
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                25,
+                78
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                25,
+                79
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                26,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                26,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                26,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                26,
+                26
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                26,
+                43
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                26,
+                46
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                26,
+                49
+            ],
+            "tile": "nature-sprites.json:leaves2"
+        },
+        {
+            "pos": [
+                26,
+                50
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                26,
+                73
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                26,
+                78
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                26,
+                79
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                27,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                27,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                27,
+                17
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                27,
+                18
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                27,
+                25
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                27,
+                43
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                27,
+                44
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                27,
+                45
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                27,
+                49
+            ],
+            "tile": "nature-sprites.json:leaves3"
+        },
+        {
+            "pos": [
+                27,
+                50
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                27,
+                71
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                27,
+                72
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                27,
+                78
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                28,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                28,
+                1
+            ],
+            "tile": "nature-sprites.json:grass1"
+        },
+        {
+            "pos": [
+                28,
+                16
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                28,
+                17
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                28,
+                24
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                28,
+                42
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                28,
+                49
+            ],
+            "tile": "nature-sprites.json:leaves1"
+        },
+        {
+            "pos": [
+                28,
+                70
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                0
+            ],
+            "tile": "nature-sprites.json:dirt1"
+        },
+        {
+            "pos": [
+                29,
+                1
+            ],
+            "tile": "nature-sprites.json:grass2"
+        },
+        {
+            "pos": [
+                29,
+                2
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                3
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                4
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                5
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                6
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                7
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                8
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                9
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                10
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                11
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                12
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                13
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                14
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                15
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                16
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                17
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                18
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                19
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                20
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                21
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                22
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                23
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                24
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                25
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                26
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                27
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                28
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                29
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                30
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                31
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                32
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                33
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                34
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                35
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                36
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                37
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                38
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                39
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                40
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                41
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                42
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                43
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                44
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                45
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                46
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                47
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                48
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                49
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                50
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                51
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                52
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                53
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                54
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                55
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                56
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                57
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                58
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                59
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                60
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                61
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                62
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                63
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                64
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                65
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                66
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                67
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                68
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                69
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                70
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                71
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                72
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                73
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                74
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                75
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                76
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                77
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                78
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                79
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                80
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                81
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                82
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                83
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                84
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                85
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                86
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                87
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                88
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                89
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                90
+            ],
+            "tile": "nature-sprites.json:tree1"
+        },
+        {
+            "pos": [
+                29,
+                91
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                92
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                93
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                94
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                95
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                96
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                97
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                98
+            ],
+            "tile": "nature-sprites.json:tree2"
+        },
+        {
+            "pos": [
+                29,
+                99
+            ],
+            "tile": "nature-sprites.json:tree2"
+        }
+    ],
+    "width": 30
+}

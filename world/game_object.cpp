@@ -58,7 +58,7 @@ void GameObject::take_damage(int attack_damage) {
     if (iframe_time_remaining > 0.0) return;
 
     health -= attack_damage;
-    iframe_time_remaining = 2;
+    iframe_time_remaining = 0.5;
     if (health <= 0) {
         is_alive = false;
     }

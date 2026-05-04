@@ -7,6 +7,7 @@ public:
 
   double lifetime;
   double elapsed{0.0};
+  int direction;
 
   void update(World& world, double dt) override;
 };

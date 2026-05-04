@@ -16,7 +16,7 @@
                     ],
                     "physics" : {
                         "velocity": [10, 0],
-                        "acceleration" : [0, 0],
+                        "acceleration" : [0, -10],
                         "gravity": -30.0,
                         "damping": 1.0,
                         "walk_acceleration": 60.0,
@@ -45,13 +45,39 @@
                         "acceleration" : [0, 0],
                         "gravity": -30.0,
                         "damping": 1.0,
-                        "walk_acceleration": 60.0,
+                        "walk_acceleration": 30.0,
                         "jump_velocity": 20.0,
                         "terminal_velocity": 30.0
                     },
                     "damage" : 3,
-                    "lifetime" : 2,
+                    "lifetime" : 1.5,
                     "size" : [1,1]
+                },
+                {
+                "name": "void_attack2",
+                "sprites" : [
+                {
+                    "name" : "idle",
+                    "filename" : "void_attack.png",
+                    "location" : [0, 0],
+                    "size" : [64, 64],
+                    "scale" : 1,
+                    "number_of_frames" : 1,
+                    "dt_per_frame" : 1
+                }
+            ],
+                "physics" : {
+                "velocity": [-10, 0],
+                "acceleration" : [0, 0],
+                "gravity": -30.0,
+                "damping": 1.0,
+                "walk_acceleration": 30.0,
+                "jump_velocity": 20.0,
+                "terminal_velocity": 30.0
+            },
+                "damage" : 3,
+                "lifetime" : 1.5,
+                "size" : [1,1]
                 },
                 {
                     "name": "melee_attack",
@@ -72,6 +98,32 @@
                         "gravity": -30.0,
                         "damping": 1.0,
                         "walk_acceleration": 60.0,
+                        "jump_velocity": 20.0,
+                        "terminal_velocity": 30.0
+                    },
+                    "damage" : 5,
+                    "lifetime" : 0.2,
+                    "size" : [1,1]
+                },
+                {
+                    "name": "melee_attack2",
+                    "sprites" : [
+                        {
+                            "name" : "idle",
+                            "filename" : "melee_projectile.png",
+                            "location" : [0, 0],
+                            "size" : [64, 64],
+                            "scale" : 1,
+                            "number_of_frames" : 2,
+                            "dt_per_frame" : 0.5
+                        }
+                    ],
+                    "physics" : {
+                        "velocity": [-10, 0],
+                        "acceleration" : [-1, -1],
+                        "gravity": -30.0,
+                        "damping": 1.0,
+                        "walk_acceleration": -60.0,
                         "jump_velocity": 20.0,
                         "terminal_velocity": 30.0
                     },

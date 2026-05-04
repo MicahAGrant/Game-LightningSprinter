@@ -10,7 +10,8 @@ enum class ActionType {
     WallJumpLeft,
     WallJumpRight,
     Attack,
-    Melee,
+    MeleeLeft,
+    MeleeRight,
     AttackAll
 };
 
@@ -66,7 +67,12 @@ public:
     void perform(World& world, GameObject& obj) override;
 };
 
-class AttackMelee : public Action {
+class AttackMeleeRight : public Action {
+public:
+    void perform(World& world, GameObject& obj) override;
+};
+
+class AttackMeleeLeft : public Action {
 public:
     void perform(World& world, GameObject& obj) override;
 };
