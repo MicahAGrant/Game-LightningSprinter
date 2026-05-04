@@ -32,12 +32,12 @@ void WallJumpRight::perform(World&, GameObject& obj) {
     obj.physics.velocity.x += -20;
 }
 
-void ShootFireball::perform(World &world, GameObject &obj) {
-    auto fireball = dynamic_cast<Projectile*>(world.available_items["fireball"]());
-    fireball->physics.position = (obj.physics.position);
-    world.projectiles.push_back(fireball);
-    // make the fireball shooting sound
-    world.audio->play_sounds("fireball");
+void ShootDagger::perform(World &world, GameObject &obj) {
+    auto dagger = dynamic_cast<Projectile*>(world.available_items["dagger"]());
+    dagger->physics.position = (obj.physics.position);
+    world.projectiles.push_back(dagger);
+    // make the whoosh shooting sound
+    world.audio->play_sounds("whoosh");
 }
 
 void AttackProjectile::perform(World& world, GameObject& obj) {

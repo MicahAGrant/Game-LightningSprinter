@@ -2,15 +2,15 @@
     "projectiles":
             [
                 {
-                    "name": "fireball",
+                    "name": "dagger",
                     "sprites" : [
                         {
                             "name" : "idle",
-                            "filename" : "fireball.png",
+                            "filename" : "dagger.png",
                             "location" : [0, 0],
-                            "size" : [10, 10],
-                            "scale" : 2,
-                            "number_of_frames" : 2,
+                            "size" : [64, 64],
+                            "scale" : 1,
+                            "number_of_frames" : 8,
                             "dt_per_frame" : 0.1
                         }
                     ],

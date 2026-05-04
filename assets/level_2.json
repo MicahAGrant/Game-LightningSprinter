@@ -70,9 +70,9 @@
             "name": "jump"
         },
         {
-            "filename": "fire.mp3",
+            "filename": "whoosh.mp3",
             "loop_forever": false,
-            "name": "fireball"
+            "name": "whoosh"
         },
         {
             "filename": "sword_slash.mp3",
