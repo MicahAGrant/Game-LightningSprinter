@@ -69,6 +69,10 @@ void Game::update() {
                 if (world->end_level) {
                     load_level();
                 }
+                // check for previous level
+                if (world->prev_level) {
+                    load_prev_level();
+                }
                 // check for level end
                 if (world->end_game) {
                     mode = GameMode::GameOver;
@@ -131,11 +135,37 @@ Game::~Game() {
 
 void Game::get_events() {
     events["next_level"] = new NextLevel();
+    events["previous_level"] = new PreviousLevel();
     events["win"] = new Win();
 }
 
 void Game::load_level() {
     std::string level_name = "level_" + std::to_string(++current_level);
+    Level level{level_name};
+    AssetManager::get_level_details(graphics, level);
+
+    // create the world
+    delete world;
+    world = new World(level, audio, player.get(), events);
+
+    // get available items
+    AssetManager::get_available_items("items", graphics, *world);
+
+    // assets for objs
+    for (auto obj : world->game_objects) {
+        if (obj == world->player) continue;
+        update_enemy(*obj, dt);
+        AssetManager::get_game_object_details(obj->obj_name + "-enemy", graphics, *obj, true);
+    }
+
+    player->physics.position = {static_cast<float>(level.player_spawn_location.x), static_cast<float>(level.player_spawn_location.y)};
+    player->fsm->current_state->on_enter(*world, *player);
+    camera.set_location(player->physics.position);
+    audio.play_sounds("background", true);
+}
+
+void Game::load_prev_level() {
+    std::string level_name = "level_" + std::to_string(--current_level);
     Level level{level_name};
     AssetManager::get_level_details(graphics, level);
 

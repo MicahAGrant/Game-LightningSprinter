@@ -2,18 +2,18 @@
     "backgrounds": [
         {
             "distance": 4.0,
-            "filename": "BG4.png",
-            "scale": 6.0
+            "filename": "BG1.png",
+            "scale": 5.0
         },
         {
             "distance": 2.0,
-            "filename": "BG5.png",
-            "scale": 6.0
+            "filename": "BG2.png",
+            "scale": 5.0
         },
         {
             "distance": 1.0,
-            "filename": "BG6.png",
-            "scale": 6.0
+            "filename": "BG3.png",
+            "scale": 5.0
         }
     ],
     "enemies": [
@@ -80,6 +80,11 @@
             "filename": "fire.mp3",
             "loop_forever": false,
             "name": "fireball"
+        },
+        {
+            "filename": "sword_slash.mp3",
+            "loop_forever": false,
+            "name": "sword_slash"
         }
     ],
     "tile_filenames": [
@@ -105,7 +110,7 @@
                 0,
                 2
             ],
-            "tile": "nature-sprites.json:tree1"
+            "tile": "nature-sprites.json:treedoorback"
         },
         {
             "pos": [

@@ -9,6 +9,11 @@ void NextLevel::perform(World& world, GameObject& obj) {
     world.end_level = true;
 }
 
+void PreviousLevel::perform(World& world, GameObject& obj) {
+    if (&obj != world.player) return;
+    world.prev_level = true;
+}
+
 void Win::perform(World& world, GameObject& obj) {
     if (&obj != world.player) return;
     world.end_game = true;

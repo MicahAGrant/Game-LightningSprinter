@@ -57,6 +57,7 @@ void AttackMeleeRight::perform(World& world, GameObject& obj) {
     melee_attack->physics.position = obj.physics.position;
     world.projectiles.push_back(melee_attack);
     // sound effect here
+    world.audio->play_sounds("sword_slash");
 }
 
 void AttackMeleeLeft::perform(World& world, GameObject& obj) {
@@ -65,4 +66,5 @@ void AttackMeleeLeft::perform(World& world, GameObject& obj) {
     melee_attack->physics.position = {obj.physics.position.x, obj.physics.position.y};
     world.projectiles.push_back(melee_attack);
     // sound effect here
+    world.audio->play_sounds("sword_slash");
 }

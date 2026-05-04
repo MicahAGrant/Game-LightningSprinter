@@ -39,6 +39,7 @@ private:
     // level help
     int current_level{0};
     void load_level();
+    void load_prev_level();
 
     void create_player();
     void update_enemy(GameObject& obj, float dt);

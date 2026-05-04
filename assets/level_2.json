@@ -73,6 +73,11 @@
             "filename": "fire.mp3",
             "loop_forever": false,
             "name": "fireball"
+        },
+        {
+            "filename": "sword_slash.mp3",
+            "loop_forever": false,
+            "name": "sword_slash"
         }
     ],
     "tile_filenames": [
@@ -105,7 +110,7 @@
                 0,
                 3
             ],
-            "tile": "nature-sprites.json:tree2"
+            "tile": "nature-sprites.json:treedoorback"
         },
         {
             "pos": [

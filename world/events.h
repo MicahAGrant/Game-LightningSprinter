@@ -19,6 +19,11 @@ class NextLevel : public Event {
     void perform(World& world, GameObject& obj) override;
 };
 
+class PreviousLevel : public Event {
+  public:
+    void perform(World& world, GameObject& obj) override;
+};
+
 class Win : public Event {
 public:
   void perform(World& world, GameObject& obj) override;

@@ -35,6 +35,7 @@ public:
     Tilemap tilemap;
     Physics physics;
     bool end_level{false};
+    bool prev_level{false};
 
     GameObject* player;
     Audio* audio;

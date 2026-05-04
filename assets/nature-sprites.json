@@ -158,6 +158,19 @@
     },
     {
       "sprite": {
+        "name": "treedoorback",
+        "filename": "treedoorback.png",
+        "location": [0, 0],
+        "size": [64, 64],
+        "scale": 1,
+        "number_of_frames": 1,
+        "dt_per_frame": -1
+      },
+      "blocking": true,
+      "event_name": "previous_level"
+    },
+    {
+      "sprite": {
         "name": "wave",
         "filename": "wave.png",
         "location": [0, 0],

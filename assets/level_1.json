@@ -80,6 +80,11 @@
             "filename": "fire.mp3",
             "loop_forever": false,
             "name": "fireball"
+        },
+        {
+            "filename": "sword_slash.mp3",
+            "loop_forever": false,
+            "name": "sword_slash"
         }
     ],
     "tile_filenames": [
