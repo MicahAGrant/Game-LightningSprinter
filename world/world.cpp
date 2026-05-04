@@ -117,7 +117,6 @@ void World::update(double dt) {
     // check for player death
     if (!player->is_alive) {
         end_game = true;
-        return;
     }
 }
 

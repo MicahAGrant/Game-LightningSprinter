@@ -24,6 +24,7 @@ public:
     void render(const Vec<float>& position, const Sprite& sprite, bool flash = false) const;
     void render(const GameObject& obj) const;
     void render_game_over();
+    void render_win();
     void render(const std::vector<Background>& backgrounds) const;
 
 private:

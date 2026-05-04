@@ -6,7 +6,7 @@
 #include "audio.h"
 #include "events.h"
 
-enum class GameMode{Playing, GameOver};
+enum class GameMode{Playing, GameOver, Win};
 
 class Game {
 public:

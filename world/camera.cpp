@@ -110,6 +110,11 @@ void Camera::render_game_over() {
     graphics.draw(full_screen, Color{0,0,0,180}, true);
 }
 
+void Camera::render_win() {
+    SDL_FRect full_screen(0.0f, 0.0f, static_cast<float>(graphics.width), static_cast<float>(graphics.height));
+    graphics.draw(full_screen, Color{0,255,0,180}, true);
+}
+
 void Camera::render(const std::vector<Background>& backgrounds) const {
     for (auto background : backgrounds) {
         float shift = physics.position.x / background.distance;

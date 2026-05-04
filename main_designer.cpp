@@ -9,22 +9,8 @@ SDL_AppResult SDL_AppInit(void **appstate, int, char**) {
         SDL_Log("Couldn't initialize SDL: %s", SDL_GetError());
         return SDL_APP_FAILURE;
     }
-    std::string level = "level_1";
-    // int level_num = 1;
-    auto designer = new LevelDesigner(level, 100, 20);
-    // const bool* keys = SDL_GetKeyboardState(nullptr);
-    // if (keys[SDL_SCANCODE_N]) {
-    //     level.pop_back();
-    //     level_num++;
-    //     level.append(std::to_string(level_num));
-    //     designer = new LevelDesigner(level, 100, 20);
-    // }
-    // if (keys[SDL_SCANCODE_M]) {
-    //     level.pop_back();
-    //     level_num--;
-    //     level.append(std::to_string(level_num));
-    //     designer = new LevelDesigner(level, 30, 100);
-    // }
+    std::string level = "level_3";
+    auto designer = new LevelDesigner(level, 30, 100);
     *appstate = designer;
 
     return SDL_APP_CONTINUE;  /* carry on with the program! */

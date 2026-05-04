@@ -75,7 +75,7 @@ void Game::update() {
                 }
                 // do one where game ends and if player alive, then win!
                 if (world->end_game && player->is_alive) {
-                    // mode = GameMode::Win;
+                    mode = GameMode::Win;
                 }
                 break;
         }
@@ -107,8 +107,14 @@ void Game::render() {
         camera.render(*projectile);
     }
 
+    // game over screen (lose/die)
     if (mode == GameMode::GameOver) {
         camera.render_game_over();
+    }
+
+    // win screen
+    if (mode == GameMode::Win) {
+        camera.render_win();
     }
 
     // update
@@ -125,6 +131,7 @@ Game::~Game() {
 
 void Game::get_events() {
     events["next_level"] = new NextLevel();
+    events["win"] = new Win();
 }
 
 void Game::load_level() {
